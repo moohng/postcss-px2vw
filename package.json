@@ -1,0 +1,29 @@
+{
+  "name": "postcss-px2vw",
+  "version": "1.0.0",
+  "description": "A CSS post-processor that converts px to vw and fallback rem.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:moohng/postcss-px2vw.git"
+  },
+  "keywords": [
+    "css",
+    "rem",
+    "pixel",
+    "px",
+    "vw",
+    "viewport",
+    "postcss",
+    "postcss-plugin"
+  ],
+  "author": "Kevin",
+  "license": "MIT",
+  "dependencies": {
+    "object-assign": "^4.1.1",
+    "postcss": "^7.0.2"
+  }
+}
