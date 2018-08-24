@@ -7,7 +7,7 @@
 ## 安装
 
 ```bash
-$ npm install postcss-px2vw --save-dev
+$ npm install @moohng/postcss-px2vw --save-dev
 ```
 
 ## 使用
