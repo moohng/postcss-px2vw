@@ -8,6 +8,7 @@ module.exports = postcss.plugin('postcss-px2vw', function (options) {
     viewportWidth: 750,
     unitPrecision: 5,
     rootValue: 75,
+    minPixelValue: 1
   }, options);
 
   var pxRegex = /"[^"]+"|'[^']+'|url\([^\)]+\)|(\d*\.?\d+)px/ig;
@@ -17,24 +18,28 @@ module.exports = postcss.plugin('postcss-px2vw', function (options) {
       if (decl.value.indexOf('px') === -1) return;
       var value = decl.value;
       if (opts.viewportWidth) {
-        var pxReplaceForVw = createPxReplace(opts.viewportWidth / 100, opts.unitPrecision, 'vw');
+        var pxReplaceForVw = createPxReplace(opts.viewportWidth / 100, opts.minPixelValue, opts.unitPrecision, 'vw');
         decl.value = value.replace(pxRegex, pxReplaceForVw);
       }
       if (opts.rootValue) {
-        var pxReplaceForRem = createPxReplace(opts.rootValue, opts.unitPrecision, 'rem');
-        decl.parent.insertBefore(i, decl.clone({
-          value: value.replace(pxRegex, pxReplaceForRem)
-        }));
+        var pxReplaceForRem = createPxReplace(opts.rootValue, opts.minPixelValue, opts.unitPrecision, 'rem');
+        if (opts.viewportWidth) {
+          decl.parent.insertBefore(i, decl.clone({
+            value: value.replace(pxRegex, pxReplaceForRem)
+          }));
+        } else {
+          decl.value = value.replace(pxRegex, pxReplaceForRem);
+        }
       }
     });
   };
 });
 
-function createPxReplace(perRatio, unitPrecision, unit) {
+function createPxReplace(perRatio, minPixelValue, unitPrecision, unit) {
   return function (m, $1) {
     if (!$1) return m;
     var pixels = parseFloat($1);
-    if (pixels <= 1) return m;
+    if (pixels <= minPixelValue) return m;
     return toFixed((pixels / perRatio), unitPrecision) + unit;
   };
 }
