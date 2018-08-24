@@ -1,5 +1,5 @@
 {
-  "name": "@mo/postcss-px2vw",
+  "name": "@moohng/postcss-px2vw",
   "version": "1.0.0",
   "description": "A CSS post-processor that converts px to vw and fallback rem.",
   "main": "index.js",
