@@ -57,4 +57,4 @@ module.exports = {
 
 如果你觉得对你有帮助，欢迎 star 和 issue
 
-<img src="http://static.moohng.com/FrEihC8JSWMtsxtnDUpQiuaL9ZbE" align="微信支付" width="320px">
+![微信支付](http://static.moohng.com/FrEihC8JSWMtsxtnDUpQiuaL9ZbE?imageView2/1/w/320/h/320/format/webp/q/75|imageslim)

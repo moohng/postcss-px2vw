@@ -1,6 +1,6 @@
 {
   "name": "@moohng/postcss-px2vw",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CSS post-processor that converts px to vw and fallback rem.",
   "main": "index.js",
   "scripts": {
