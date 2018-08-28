@@ -24,9 +24,10 @@ module.exports = postcss.plugin('postcss-px2vw', function (options) {
       if (opts.rootValue) {
         var pxReplaceForRem = createPxReplace(opts.rootValue, opts.minPixelValue, opts.unitPrecision, 'rem');
         if (opts.viewportWidth) {
-          decl.parent.insertBefore(i, decl.clone({
-            value: value.replace(pxRegex, pxReplaceForRem)
-          }));
+          var newValue = value.replace(pxRegex, pxReplaceForRem);
+          if (newValue !== value) {
+            decl.parent.insertBefore(i, decl.clone({ value: newValue }));
+          }
         } else {
           decl.value = value.replace(pxRegex, pxReplaceForRem);
         }

@@ -2,7 +2,7 @@
 
 一款 [PostCSS](https://github.com/ai/postcss) 插件，将 `px` 转换成 `vw` 和 `rem`。
 
-该插件主要结合了 [postcss-pxtorem](https://github.com/cuth/postcss-pxtorem) 和 [postcss-px-to-viewport](https://github.com/evrone/postcss-px-to-viewport) 的功能，精简了不常用的配置。默认将 `vw` 作为优选单位使用，以 `rem` 作为回退模式。考虑到 `vw` 在一些老旧设备上支持不够理想，这款插件很好的解决了该问题。
+该插件主要结合了 [postcss-pxtorem](https://github.com/cuth/postcss-pxtorem) 和 [postcss-px-to-viewport](https://github.com/evrone/postcss-px-to-viewport) 的功能，精简了不常用的配置。默认将 `vw` 作为优先单位使用，以 `rem` 作为回退模式。考虑到 `vw` 在移动设备的支持度不如 `rem`，这款插件很好的解决了该问题。
 
 ## 安装
 
@@ -16,7 +16,7 @@ $ npm install @moohng/postcss-px2vw --save-dev
 // .postcssrc.js
 module.exports = {
   plugins: {
-    'postcss-px2vw': {}
+    '@moohng/postcss-px2vw': {}
   }
 }
 ```
@@ -53,7 +53,7 @@ module.exports = {
 
 如果要使用 `rem` 单位，需要自己通过 `js` 来动态计算根字体的大小。如果将设计图分成 10 等分计算，那么根字体的大小应该是 `window.innerWidth / 10`。
 
-## 致谢
+## 最后
 
 如果你觉得对你有帮助，欢迎 star 和 issue
 
