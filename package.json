@@ -24,6 +24,6 @@
   "license": "MIT",
   "dependencies": {
     "object-assign": "^4.1.1",
-    "postcss": "^7.0.2"
+    "postcss": "^7.0.27"
   }
 }
