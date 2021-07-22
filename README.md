@@ -1,6 +1,7 @@
 <h1 align="center">postcss-px2vw</h1>
 
 <p align="center">
+  <img alt="npm" src="https://github.com/moohng/postcss-px2vw/actions/workflows/npmpublish.yml/badge.svg">
   <img alt="npm" src="https://img.shields.io/npm/dw/@moohng/postcss-px2vw">
   <img alt="npm" src="https://img.shields.io/npm/v/@moohng/postcss-px2vw">
   <img alt="GitHub" src="https://img.shields.io/github/license/moohng/postcss-px2vw">
