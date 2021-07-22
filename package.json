@@ -1,15 +1,19 @@
 {
   "name": "@moohng/postcss-px2vw",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "A CSS post-processor that converts px to vw and fallback rem.",
   "main": "index.js",
   "scripts": {
+    "demo": "postcss demo/**/*.css -d dist --base demo --config demo/postcss.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:moohng/postcss-px2vw.git"
   },
+  "files": [
+    "index.js"
+  ],
   "keywords": [
     "css",
     "rem",
@@ -20,10 +24,18 @@
     "postcss",
     "postcss-plugin"
   ],
+  "funding": {
+    "type": "open",
+    "url": "https://github.com/moohng/postcss-px2vw"
+  },
   "author": "Kevin",
   "license": "MIT",
-  "dependencies": {
-    "object-assign": "^4.1.1",
-    "postcss": "^7.0.27"
+  "devDependencies": {
+    "clean-publish": "^2.2.0",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1"
+  },
+  "peerDependencies": {
+    "postcss": "^8.3.6"
   }
 }
