@@ -1,4 +1,11 @@
-# postcss-px2vw
+<h1 align="center">postcss-px2vw</h1>
+
+<p align="center">
+  <img alt="npm" src="https://img.shields.io/npm/dw/@moohng/postcss-px2vw">
+  <img alt="npm" src="https://img.shields.io/npm/v/@moohng/postcss-px2vw">
+  <img alt="GitHub" src="https://img.shields.io/github/license/moohng/postcss-px2vw">
+</p>
+
 
 一款 [PostCSS](https://github.com/ai/postcss) 插件，将 `px` 转换成 `vw` 和 `rem`。
 
@@ -7,7 +14,7 @@
 ## 安装
 
 ```bash
-$ npm install @moohng/postcss-px2vw --save-dev
+$ npm i @moohng/postcss-px2vw -D
 ```
 
 ## 使用
@@ -57,4 +64,4 @@ module.exports = {
 
 如果你觉得对你有帮助，欢迎 star 和 issue
 
-![微信支付](http://static.moohng.com/FrEihC8JSWMtsxtnDUpQiuaL9ZbE?imageView2/1/w/320/h/320/format/webp/q/75|imageslim)
+![微信支付](https://static.moohng.com/FrEihC8JSWMtsxtnDUpQiuaL9ZbE?imageView2/1/w/320/h/320/format/webp/q/75|imageslim)
