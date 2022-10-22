@@ -15,11 +15,13 @@ module.exports = (options = {}) => {
       if (decl.value.indexOf('px') === -1) return;
       const value = decl.value;
       if (opts.viewportWidth) {
-        const pxReplaceForVw = createPxReplace(opts.viewportWidth / 100, opts.minPixelValue, opts.unitPrecision, 'vw');
+        const viewportWidth = typeof opts.viewportWidth === 'function' ? opts.viewportWidth(opts, decl, decl.source.input.file) : opts.viewportWidth
+        const pxReplaceForVw = createPxReplace(viewportWidth / 100, opts.minPixelValue, opts.unitPrecision, 'vw');
         decl.value = value.replace(pxRegex, pxReplaceForVw);
       }
       if (opts.rootValue) {
-        const pxReplaceForRem = createPxReplace(opts.rootValue, opts.minPixelValue, opts.unitPrecision, 'rem');
+        const rootValue = typeof opts.rootValue === 'function' ? opts.rootValue(opts, decl, decl.source.input.file) : opts.rootValue
+        const pxReplaceForRem = createPxReplace(rootValue, opts.minPixelValue, opts.unitPrecision, 'rem');
         if (opts.viewportWidth) {
           var newValue = value.replace(pxRegex, pxReplaceForRem);
           if (newValue !== value) {
