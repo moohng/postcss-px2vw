@@ -64,5 +64,3 @@ module.exports = {
 ## 最后
 
 如果你觉得对你有帮助，欢迎 star 和 issue
-
-![微信支付](https://static.moohng.com/FrEihC8JSWMtsxtnDUpQiuaL9ZbE?imageView2/1/w/320/h/320/format/webp/q/75|imageslim)
